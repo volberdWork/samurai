@@ -131,7 +131,6 @@ class GameScreenView: UIView {
         collectionView.layer.borderColor = CGColor(red: 251, green: 251, blue: 251, alpha: 1)
         collectionView.layer.borderWidth = 2
         collectionView.layer.cornerRadius = 6
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
         return collectionView
     }()
     
