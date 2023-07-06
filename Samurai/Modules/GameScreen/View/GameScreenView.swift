@@ -121,6 +121,20 @@ class GameScreenView: UIView {
         return obj
     }()
     
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .theme(.cellSet)
+        collectionView.layer.borderColor = CGColor(red: 251, green: 251, blue: 251, alpha: 1)
+        collectionView.layer.borderWidth = 2
+        collectionView.layer.cornerRadius = 6
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        return collectionView
+    }()
+    
     var pauseeTitle: UILabel = {
         let obj = UILabel()
         obj.text = "pause_title".localized()
@@ -216,6 +230,7 @@ class GameScreenView: UIView {
         rightView.addSubview(forthRightImage)
         rightView.addSubview(fiftRightImage)
         rightView.addSubview(sixthRightImage)
+        addSubview(collectionView)
         
         backgroundImageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -301,11 +316,19 @@ class GameScreenView: UIView {
             make.width.equalTo(25)
         }
         
-        firsttargetPointLabel.snp.makeConstraints { make in
-            make.leading.equalTo(firstRightImage).inset(6)
-            make.top.equalTo(targetLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
-            make.height.equalTo(25)
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(button.snp.bottom).offset(16)
+            make.trailing.equalTo(rightView.snp.leading).inset(-32)
+            make.leading.equalToSuperview().offset(100)
+            make.bottom.equalTo(safeAreaLayoutGuide.snp.bottom).inset(16)
         }
+
+        
+//        firsttargetPointLabel.snp.makeConstraints { make in
+//            make.leading.equalTo(firstRightImage).inset(6)
+//            make.top.equalTo(targetLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
+//            make.height.equalTo(25)
+//        }
 
         secondRightImage.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(16)
@@ -314,11 +337,11 @@ class GameScreenView: UIView {
             make.width.equalTo(25)
         }
         
-        secondTargetPointLabel.snp.makeConstraints { make in
-            make.leading.equalTo(secondRightImage).inset(6)
-            make.top.equalTo(firsttargetPointLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
-            make.height.equalTo(25)
-        }
+//        secondTargetPointLabel.snp.makeConstraints { make in
+//            make.leading.equalTo(secondRightImage).inset(6)
+//            make.top.equalTo(firsttargetPointLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
+//            make.height.equalTo(25)
+//        }
 
         thirdRightImage.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(16)
@@ -327,11 +350,11 @@ class GameScreenView: UIView {
             make.width.equalTo(25)
         }
         
-        thirdTargetPointLabel.snp.makeConstraints { make in
-            make.leading.equalTo(thirdRightImage).inset(6)
-            make.top.equalTo(secondTargetPointLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
-            make.height.equalTo(25)
-        }
+//        thirdTargetPointLabel.snp.makeConstraints { make in
+//            make.leading.equalTo(thirdRightImage).inset(6)
+//            make.top.equalTo(secondTargetPointLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
+//            make.height.equalTo(25)
+//        }
 
         forthRightImage.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(16)
@@ -339,12 +362,12 @@ class GameScreenView: UIView {
             make.height.equalTo(25)
             make.width.equalTo(25)
         }
-        
-        forthTargetPointLabel.snp.makeConstraints { make in
-            make.leading.equalTo(forthRightImage).inset(6)
-            make.top.equalTo(thirdTargetPointLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
-            make.height.equalTo(25)
-        }
+//
+//        forthTargetPointLabel.snp.makeConstraints { make in
+//            make.leading.equalTo(forthRightImage).inset(6)
+//            make.top.equalTo(thirdTargetPointLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
+//            make.height.equalTo(25)
+//        }
 
         fiftRightImage.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(16)
@@ -353,11 +376,11 @@ class GameScreenView: UIView {
             make.width.equalTo(25)
         }
         
-        fiftTargetPointLabel.snp.makeConstraints { make in
-            make.leading.equalTo(fiftRightImage).inset(6)
-            make.top.equalTo(forthTargetPointLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
-            make.height.equalTo(25)
-        }
+//        fiftTargetPointLabel.snp.makeConstraints { make in
+//            make.leading.equalTo(fiftRightImage).inset(6)
+//            make.top.equalTo(forthTargetPointLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
+//            make.height.equalTo(25)
+//        }
 
         sixthRightImage.snp.makeConstraints { make in
             make.leading.equalToSuperview().inset(16)
@@ -365,12 +388,12 @@ class GameScreenView: UIView {
             make.height.equalTo(25)
             make.width.equalTo(25)
         }
-        
-        sistTargetPointLabel.snp.makeConstraints { make in
-            make.leading.equalTo(sixthRightImage).inset(6)
-            make.top.equalTo(fiftTargetPointLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
-            make.height.equalTo(25)
-        }
+//
+//        sistTargetPointLabel.snp.makeConstraints { make in
+//            make.leading.equalTo(sixthRightImage).inset(6)
+//            make.top.equalTo(fiftTargetPointLabel.snp.bottom).offset(16) // Исправлено на offset для правильного отступа от targetLabel
+//            make.height.equalTo(25)
+//        }
 
 
         
