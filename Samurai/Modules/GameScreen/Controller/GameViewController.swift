@@ -73,7 +73,7 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
             cell.layer.borderColor = UIColor(red: 130/255, green: 251/255, blue: 255/255, alpha: 1).cgColor
             cell.layer.borderWidth = 1
             
-            cell.imageView.image = UIImage(named: .Images.one)
+            cell.imageView.image = UIImage(named: .Images.ten)
             
             // Применение анимации сетки
             let delay = 0.1 * Double(indexPath.item)
