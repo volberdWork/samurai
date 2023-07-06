@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
         mainView.collectionView.visibleCells.forEach { cell in
             let delay = 0.1 * Double(cell.tag)
             cell.transform = CGAffineTransform(translationX: 0, y: mainView.collectionView.bounds.height)
-            UIView.animate(withDuration: 0.7, delay: delay, options: [.curveEaseInOut], animations: {
+            UIView.animate(withDuration: 0.7, delay: delay, options: .autoreverse, animations: {
                 cell.transform = CGAffineTransform.identity
             }, completion: nil)
         }
@@ -100,38 +100,5 @@ extension GameViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemSize = (collectionView.bounds.width - 32) / 9 // Расстояние между ячейками - 8, отступы слева и справа - 8
         return CGSize(width: itemSize, height: itemSize)
-    }
-}
-
-
-
-
-
-class GridAnimationView: UICollectionViewCell {
-    let imageView: UIImageView = {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFill
-        view.clipsToBounds = true
-        return view
-    }()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupSubviews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setupSubviews() {
-        addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
     }
 }

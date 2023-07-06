@@ -49,6 +49,7 @@
 		BD700BA62A566124003DB9EA /* GameScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700BA52A566124003DB9EA /* GameScreenView.swift */; };
 		BD700BA82A5661D9003DB9EA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700BA72A5661D9003DB9EA /* GameViewController.swift */; };
 		BD700BAA2A568FE7003DB9EA /* UserProgressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700BA92A568FE7003DB9EA /* UserProgressData.swift */; };
+		BD700BAD2A56A45F003DB9EA /* GridAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD700BAC2A56A45F003DB9EA /* GridAnimationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		BD700BA52A566124003DB9EA /* GameScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenView.swift; sourceTree = "<group>"; };
 		BD700BA72A5661D9003DB9EA /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		BD700BA92A568FE7003DB9EA /* UserProgressData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProgressData.swift; sourceTree = "<group>"; };
+		BD700BAC2A56A45F003DB9EA /* GridAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridAnimationView.swift; sourceTree = "<group>"; };
 		D433577329169658BE1B34D4 /* Pods-Samurai.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Samurai.release.xcconfig"; path = "Target Support Files/Pods-Samurai/Pods-Samurai.release.xcconfig"; sourceTree = "<group>"; };
 		DB827D40C5D6DDF79274D587 /* Pods_Samurai.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Samurai.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -411,6 +413,7 @@
 		BD700BA12A565F0C003DB9EA /* GameScreen */ = {
 			isa = PBXGroup;
 			children = (
+				BD700BAB2A56A436003DB9EA /* Cell */,
 				BD700BA42A565F31003DB9EA /* Model */,
 				BD700BA32A565F23003DB9EA /* Controller */,
 				BD700BA22A565F17003DB9EA /* View */,
@@ -439,6 +442,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BD700BAB2A56A436003DB9EA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BD700BAC2A56A45F003DB9EA /* GridAnimationView.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C6F053C27288E112F5AC1400 /* Pods */ = {
@@ -606,6 +617,7 @@
 				BD4605E42A5602F600EE3280 /* MainModel.swift in Sources */,
 				BD5C80DD2A535F4900238CD8 /* MainViewController.swift in Sources */,
 				BD5C80E32A5363F800238CD8 /* MainView.swift in Sources */,
+				BD700BAD2A56A45F003DB9EA /* GridAnimationView.swift in Sources */,
 				BD2333E22A521028006E89F1 /* CustomButton.swift in Sources */,
 				04B4A0432A5493BA00BCB00D /* ProloaderView.swift in Sources */,
 				BD2333602A51A794006E89F1 /* SceneDelegate.swift in Sources */,
