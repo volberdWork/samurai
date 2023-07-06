@@ -1,0 +1,6 @@
+framework module Pods_Samurai {
+  umbrella header "Pods-Samurai-umbrella.h"
+
+  export *
+  module * { export * }
+}

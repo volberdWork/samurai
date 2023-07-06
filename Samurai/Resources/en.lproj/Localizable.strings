@@ -1,0 +1,42 @@
+
+//start Onboarding
+"welcome" = "Welcome to the «Take Samurai»";
+"Discover" = "Discover the Wonderful Japan";
+"Take_Part" = "Take Part in the Samurai Tournament";
+"welcome_subtitle" = "Welcome to the world, where your skills will be tested in epic puzzle battles.";
+"discover_subtitle" = "Embark on a journey through the enchanting landscapes, unraveling its secrets as you progress.";
+"take_part_subtitle" = "Prove your worth as a true samurai by competing, where only the strongest will prevail.";
+"Next" = "Next";
+"Start" = "Start";
+"Play" = "Play";
+//end Ondoarding
+
+//start settings
+"leaderBoard" = "Leaderboard";
+"policy" = "Policy";
+"terms" = "Terms";
+"shareApp" = "Share App";
+"notification" = "Notification";
+"vibration" = "Vibration";
+"rateUs" = "Rate Us";
+"feedback" = "Feedback";
+
+"leaderBoard_subtitle" = "Compete with players worldwide and see where you rank among the top stake samurais.";
+"policy_subtitle" = "Read our privacy policy to understand how we handle your personal information and protect your privacy.";
+"terms_subtitle" = "Terms Review our terms of service to know the rules and guidelines for playing Stake Samurai.";
+"share_subtitle" = "Spread the word about Stake Samurai and share the excitement with your friends and fellow puzzle enthusiasts.";
+"notification_subtitle" = "Toggle notifications on or off to stay informed about game updates, challenges, and special events.";
+"vibration_subtitle" = "Enable or disable vibration feedback during gameplay to enhance your immersive experience.";
+"rate_subtitle" = "If you enjoy playing Stake Samurai, please take a moment to rate and review the game. Your feedback helps us improve!";
+"feedback_subtitle" = "Share your thoughts, suggestions, or report any issues you encounter. We value your feedback and strive to make your gaming experience exceptional.";
+
+//end settings
+
+
+//start main
+"single_title" = "In the peaceful village of Hikari, Hiroshi, a skilled samurai, awakens to find his land devastated by a dark force. Guided by an ancient prophecy, Hiroshi sets out on a quest to gather the elemental stones that hold the key to restoring balance.";
+"story_title" = "Hiroshi enters the Whispering Forest, a place shrouded in mystery. As he traverses through dense foliage and hidden paths, he encounters puzzles intertwined with nature's magic.";
+"tournament_title" = "Hiroshi's speed and agility are tested as he navigates through intricate pathways and avoids deadly traps.";
+"unlimiteed_title" = "Having obtained all the elemental stones, Hiroshi faces the ultimate test.";
+
+"pause_title" = "Take a moment to catch your breath and strategize. Press 'Play' to continue your noble quest as the stake samurai.";
